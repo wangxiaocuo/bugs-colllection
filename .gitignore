@@ -1,6 +1,5 @@
 node_modules/
 .DS_Store
-node_modules/
 dist/
 production/
 npm-debug.log*
@@ -8,6 +7,10 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 tests/**/coverage/
+
+deploy_versions/
+.temp/
+.rn_temp/
 
 # Editor directories and files
 .idea

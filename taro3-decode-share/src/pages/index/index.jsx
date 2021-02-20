@@ -10,7 +10,7 @@ export default class Index extends Component {
 
   componentWillUnmount() {}
 
-  async componentDidShow() {
+  componentDidShow() {
     // 1 没有问题
     // decodeURIComponent('')
 

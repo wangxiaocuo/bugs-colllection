@@ -21,7 +21,11 @@ export default class Index extends Component {
     // const copy = JSON.parse(JSON.stringify(currQueryOpts))
     // copy.url = decodeURIComponent(copy.url || "");
 
-    // 4 出问题了，componentDidHide和componentWillUnmount不执行
+    // 4 没有问题
+    // const url = getCurrentInstance().page.options.url;
+    // decodeURIComponent(url || "");
+
+    // 5 出问题了，componentDidHide和componentWillUnmount不执行
     const currQueryOpts = getCurrentInstance().page.options;
     currQueryOpts.url = decodeURIComponent(currQueryOpts.url || "");
   }

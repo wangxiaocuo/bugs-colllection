@@ -1,6 +1,6 @@
-import { getCurrentInstance, navigateTo } from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import React, { Component } from "react";
-import { View, Text, Button } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import "./index.scss";
 
 export default class Index extends Component {
@@ -15,7 +15,7 @@ export default class Index extends Component {
     // decodeURIComponent(currQueryOpts.name || '')
 
     // 3 出问题了，onShareAppMessage不执行
-    const currQueryOpts = getCurrentInstance().page.options;
+    const currQueryOpts = Taro.getCurrentInstance().page.options;
     currQueryOpts.name = decodeURIComponent(currQueryOpts.name || "");
   }
 
@@ -29,19 +29,10 @@ export default class Index extends Component {
     return params;
   }
 
-  handleRouteToSecond() {
-    navigateTo({
-      url: `/pages/second/index?url=${encodeURIComponent('https://www.baidu.com?q=泰罗')}`
-    });
-  }
-
   render() {
     return (
       <View className="index">
         <Text>Hello world!</Text>
-        <Button onClick={this.handleRouteToSecond.bind(this)}>
-          进入第二页
-        </Button>
       </View>
     );
   }

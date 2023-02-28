@@ -41,9 +41,10 @@ export default defineConfig({
     }),
     Components({
       dts: './types/components.d.ts',
+      dirs: [],
       // https://github.com/antfu/unplugin-vue-components/issues/195#issuecomment-955011828
       // https://github.com/antfu/unplugin-vue-components/blob/3ecdeade011d0ad4dde853ac48c3a051ba880420/src/types.ts#L63-L68
-      globs: ['src/components/V*/*.vue'],
+      // globs: ['src/components/V*/*.vue'],
       resolvers: [
         // 插件为流行的UI库提供了内置解析器，参考：https://github.com/antfu/unplugin-vue-components#importing-from-ui-libraries
         ElementPlusResolver(),

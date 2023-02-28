@@ -19,3 +19,6 @@ deploy_versions/
 *.ntvs*
 *.njsproj
 *.sln
+
+types/auto-imports.d.ts
+types/components.d.ts

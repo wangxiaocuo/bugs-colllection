@@ -29,7 +29,7 @@ export default defineConfig({
 
       dts: './types/auto-imports.d.ts',
       vueTemplate: true,
-      resolvers: [ElementPlusResolver({ exclude: /ElIcon/ })],
+      resolvers: [ElementPlusResolver()],
 
       // Generate corresponding .eslintrc-auto-import.json file.
       // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
@@ -47,7 +47,7 @@ export default defineConfig({
       // globs: ['src/components/V*/*.vue'],
       resolvers: [
         // 插件为流行的UI库提供了内置解析器，参考：https://github.com/antfu/unplugin-vue-components#importing-from-ui-libraries
-        ElementPlusResolver(),
+        ElementPlusResolver({ exclude: /ElIcon/ }),
         IconsResolver({
           prefix: 'icon',
           // 允许加载的图标集合：ElementPlus

@@ -29,7 +29,7 @@ export default defineConfig({
 
       dts: './types/auto-imports.d.ts',
       vueTemplate: true,
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ exclude: /ElIcon/ })],
 
       // Generate corresponding .eslintrc-auto-import.json file.
       // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
